@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class NumberOutOfRangeException extends Exception
+{
+    public NumberOutOfRangeException(String s)
+    {
+        super(s);
+    }
+}
+class Main
+{
+    public static void main (String[] args) {
+        try {
+            Scanner s=new Scanner(System.in);
+            System.out.println("enter number");
+            int n=s.nextInt();
+            if(n<10 || n>50)
+            {
+                throw new NumberOutOfRangeException("out of range");
+            }
+            else{
+                System.out.println(n*n);
+            }
+        }
+        catch(NumberOutOfRangeException e)
+        {
+            System.out.println("caught");
+            System.out.println(e.getMessage());
+        }
+    }
+}
