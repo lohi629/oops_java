@@ -65,3 +65,13 @@ Mythread1 t2=new Mythread1();
 t2.start();
 }
 }
+
+output:
+thread1:92
+squre:8464
+thread1:24
+squre:576
+thread1:38
+squre:1444
+thread1:21
+cube:9261
